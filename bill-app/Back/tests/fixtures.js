@@ -31,7 +31,7 @@ const fixtures = [
         model: "Bill",
         data: {
             key: "47qAXb6fIm2zOKkLzMro",
-            vat: "80",
+            vat: 80,
             status: "pending",
             type: "bill type",
             commentary: "bill comment",
@@ -48,7 +48,7 @@ const fixtures = [
         model: "Bill",
         data: {
             key: "47qAXb6fIm2zOKkLzMrb",
-            vat: "80",
+            vat: 80,
             status: "pending",
             type: "bill type",
             commentary: "bill comment",

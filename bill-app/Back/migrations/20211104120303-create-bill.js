@@ -12,7 +12,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       vat: {
-        type: Sequelize.STRING
+        type: Sequelize.NUMBER
       },
       status: {
         type: Sequelize.STRING

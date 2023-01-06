@@ -51,7 +51,7 @@ describe("Test the root path", () => {
       .then((response) => {
         expect(response.body).toContainEqual({
           id: "47qAXb6fIm2zOKkLzMrb",
-          vat: "80",
+          vat: 80,
           status: "pending",
           type: "bill type",
           commentary: "bill comment",
@@ -75,7 +75,7 @@ describe("Test the root path", () => {
       .then((response) => {
         expect(response.body).not.toContainEqual({
           id: "47qAXb6fIm2zOKkLzMro",
-          vat: "80",
+          vat: 80,
           status: "pending",
           type: "bill type",
           commentary: "bill comment",
@@ -99,7 +99,7 @@ describe("Test the root path", () => {
       .then((response) => {
         expect(response.body).toEqual({
           id: "47qAXb6fIm2zOKkLzMrb",
-          vat: "80",
+          vat: 80,
           status: "pending",
           type: "bill type",
           commentary: "bill comment",
