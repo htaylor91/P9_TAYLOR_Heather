@@ -1,9 +1,9 @@
 {
     "scripts": {
     "test": "jest",
-    "test coverage": "jest --coverage",
-    "test coverage silent": "jest --coverage --noStackTrace --silent",
-    "test coverage watch": " jest --coverage --watch"
+    "test-coverage": "jest --coverage",
+    "test-coverage-silent": "jest --coverage --noStackTrace --silent",
+    "test-coverage-watch": " jest --coverage --watch"
   },
   "jest": {
     "verbose": true,
