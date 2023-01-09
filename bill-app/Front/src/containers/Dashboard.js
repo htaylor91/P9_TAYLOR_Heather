@@ -161,7 +161,7 @@ export default class {
       .bills()
       .list()
       .then(snapshot => {
-        const bills = snapshot
+        const bills = (snapshot.filter(bill => bill.name !== null && bill.fileName !== "null"))
         .map(doc => ({
           id: doc.id,
           ...doc,
