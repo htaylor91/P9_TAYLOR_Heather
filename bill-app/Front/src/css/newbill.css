@@ -62,3 +62,20 @@ textarea:focus, input:focus, select:focus {
 *[placeholder] {
   color: #0E5AE5 !important;
 }
+
+.errormessage {
+  display: none;
+}
+
+[aria-invalid="true"] {
+  border: 2px solid red !important;
+}
+
+[aria-invalid="true"] ~ .errormessage {
+  display: inline-flex;
+  font-size: 0.8em;
+}
+
+[aria-invalid="false"] ~ .errormessage {
+  display: none;
+}
