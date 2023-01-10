@@ -32,7 +32,7 @@ export default () => {
                     <label for="expense-name" class="bold-label">Nom de la dépense</label>
                     <input required type="text" class="form-control blue-border" id="expense-name" name="expenseName" data-testid="expense-name" placeholder="Vol Paris Londres" 
                     aria-invalid="false" aria-errormessage="errName"/>
-                    <span id="errName" class="errormessage">Veuillez saisir le nom de la dépense</span>
+                    <span id="errName" data-testid="errName" class="errormessage">Veuillez saisir le nom de la dépense</span>
                   </div>
                   <div class="col-half">
                     <label for="datepicker" class="bold-label">Date</label>
@@ -60,7 +60,7 @@ export default () => {
                   </div>
                   <div class="col-half">
                     <label for="file" class="bold-label">Justificatif</label>
-                    <input required name="file" type="file" class="form-control blue-border" id="file" data-testid="file" accept=".jpg, .jpeg, .png"
+                    <input required name="file" type="file" class="form-control blue-border" id="file" data-testid="file"
                     aria-errormessage="errFile" aria-invalid="false"/>
                     <span id="errFile" data-testid="errFile" class="errormessage">Veuillez télécharger une image en format .jpg .jpeg ou .png</span>
                   </div>
