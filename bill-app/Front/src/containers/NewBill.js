@@ -15,7 +15,7 @@ export default class NewBill {
     const expenseName = this.document.querySelector(`input[data-testid="expense-name"]`)
     formNewBill.addEventListener("submit", this.handleSubmit)
     fileInput.addEventListener("change", this.handleChangeFile)
-    expenseName.addEventListener("change", this.handleChangeName)
+    expenseName.addEventListener("input", this.handleChangeName)
     this.email = JSON.parse(localStorage.getItem("user")).email
     this.fileUrl = null
     this.fileName = null
@@ -78,16 +78,10 @@ export default class NewBill {
 
   handleSubmit = e => {
     e.preventDefault()
-    const fileInput = this.document.querySelector(`input[data-testid="file"]`)
-    const name = (e.target.querySelector(`input[data-testid="expense-name"]`))
-    if(fileInput.getAttribute('aria-invalid') === 'true' || name.getAttribute('aria-invalid') === 'true'){
-      return
-    }
-    
     const bill = {
       email: this.email,
       type: e.target.querySelector(`select[data-testid="expense-type"]`).value,
-      name: name.value.trim(),
+      name: e.target.querySelector(`input[data-testid="expense-name"]`).value.trim(),
       amount: parseInt(e.target.querySelector(`input[data-testid="amount"]`).value),
       date:  e.target.querySelector(`input[data-testid="datepicker"]`).value,
       vat: parseInt(e.target.querySelector(`input[data-testid="vat"]`).value),
