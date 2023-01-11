@@ -14,7 +14,17 @@ Billed est une entreprise qui produit des solutions Saas destinées aux équipes
 
 [Issues](https://github.com/htaylor91/P9_TAYLOR_Heather/issues)
 
-[Plan de test End-to-End du parcours administrateur RH](https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/Front-End+V2/P7+Tests/Billed+-+E2E+parcours+administrateur.pdf)
+[Plan de test End-to-End du parcours administrateur RH](https://acrobat.adobe.com/link/track?uri=urn:aaid:scds:US:39328f5b-a496-36f8-92c6-0c23ebd4a228)
+
+## Jest
+
+### Rapport de tests
+
+![Rapport de tests Jest](rapport_test.png)
+
+### Rapport de couverture
+
+![Rapport de couverture Jest](rapport_couverture.png)
 
 ## Construit avec
 
