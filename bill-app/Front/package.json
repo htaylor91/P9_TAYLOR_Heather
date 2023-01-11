@@ -1,13 +1,4 @@
 {
-    "name": "p9_taylor_heather",
-    "homepage": "https://htaylor91.github.io/P9_TAYLOR_Heather/",
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/htaylor91/P9_TAYLOR_Heather.git"
-      },
-      "bugs": {
-        "url": "https://github.com/htaylor91/P9_TAYLOR_Heather/issues"
-      },
     "scripts": {
         "test": "jest",
         "test-coverage": "jest --coverage",
