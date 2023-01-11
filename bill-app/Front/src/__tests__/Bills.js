@@ -71,6 +71,26 @@ describe("Given I am connected as an employee", () => {
         expect(screen.getByText('Justificatif')).toBeVisible()
       })
     })
+
+    describe('When I click on the new bill button', () => {
+      test('Then I should be redirected to the NewBill page', async () => {
+        Object.defineProperty(window, 'localStorage', { value: localStorageMock })
+        window.localStorage.setItem('user', JSON.stringify({type: 'Employee'}))
+        const onNavigate = (pathname) => {document.body.innerHTML = ROUTES({ pathname })}
+        document.body.innerHTML = BillsUI({data:bills})
+        const employeeBillsPage = new Bills({
+          document, onNavigate, store: mockStore, localStorage: localStorageMock
+        })
+        const handleClickNewBill = jest.fn((event) => employeeBillsPage.handleClickNewBill(event))
+        const newBillButton = screen.getByRole('button', {name: /nouvelle note de frais/i})
+        newBillButton.addEventListener('click', handleClickNewBill)
+
+        userEvent.click(newBillButton)
+        
+        await waitFor(() => expect(handleClickNewBill).toHaveBeenCalledTimes(1))
+        expect(screen.getByText('Envoyer une note de frais')).toBeVisible()
+      })
+    })
   })
 })
 
@@ -86,7 +106,7 @@ describe("Given I am connected as an Employee", () => {
       document.body.append(root)
       router()
       window.onNavigate(ROUTES_PATH.Bills)
-      const tableBody = screen.getByTestId('tbody')
+      const tableBody = await waitFor(() => screen.getByTestId('tbody'))
 
       expect(tableBody).toBeTruthy()
       expect(screen.getByText('test3')).toBeVisible()
