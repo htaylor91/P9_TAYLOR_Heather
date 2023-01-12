@@ -2,7 +2,7 @@ export default `
 <svg xmlns="http://www.w3.org/2000/svg"
      width="0.2in" height="0.222222in"
      viewBox="0 0 18 20">
-  <path id="Imported Path"
+  <path data-id="calendarPath"
         fill="#0D5AE5" stroke="none" stroke-width="0"
         d="M 16.00,2.00
            C 16.00,2.00 15.00,2.00 15.00,2.00

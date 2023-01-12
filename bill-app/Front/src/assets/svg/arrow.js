@@ -2,7 +2,7 @@ export default `
   <svg xmlns="http://www.w3.org/2000/svg"
   width="0.18in" height="0.12in"
   viewBox="0 0 16 11">
-    <path id="Imported Path"
+    <path data-id="arrowPath"
       fill="#979797" stroke="none" stroke-width="0"
       d="M 14.12,0.45
           C 14.12,0.45 8.00,6.56 8.00,6.56
