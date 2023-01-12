@@ -80,7 +80,7 @@ export default class {
 
   handleClickIconEye = () => {
     const billUrl = $('#icon-eye-d').attr("data-bill-url")
-    $('#modaleFileAdmin1').find(".modal-body").html(`<div style='text-align: center;' class="bill-proof-container"><img width="100%" src=${billUrl} alt="Bill"/></div>`)
+    $('#modaleFileAdmin1').find(".modal-body").html(`<div style='text-align: center;' class="bill-proof-container"><img src=${billUrl} alt="Bill"/></div>`)
     if (typeof $('#modaleFileAdmin1').modal === 'function') $('#modaleFileAdmin1').modal('show')
   }
 
