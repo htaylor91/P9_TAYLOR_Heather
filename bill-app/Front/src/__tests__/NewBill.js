@@ -49,8 +49,10 @@ describe("Given I am connected as an employee", () => {
     test("Then the form should have an optional text area with a visible label", () => {
       expect(commentary()).not.toBeRequired();
     })
-    test("Then the form should have 7 required fields", () => {
-      expect(expenseType()).toBeRequired()
+    test("Then the form should have a default expense type selected", () => {
+      expect(screen.getByDisplayValue('Transports')).toBeTruthy()
+    })
+    test("Then the form should have 6 required fields", () => {
       expect(expenseName()).toBeRequired()
       expect(datepicker()).toBeRequired()
       expect(amount()).toBeRequired()
